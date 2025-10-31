@@ -780,47 +780,16 @@ mjx-container[display="block"] { display: block; }
 
 /* Safety: avoid accidental horizontal page scroll */
 html, body { overflow-x: hidden; }
-
-/* Keep equations inside their box; never widen the page */
-mjx-container {
-  display: block;
-  max-width: 100% !important;
-  overflow-x: auto;      /* local scroll only if absolutely needed */
-  overflow-y: hidden;
-}
-mjx-container[display="block"] { margin: .5rem 0; }
-
-/* Let the math box, code blocks, etc. scroll locally */
-.math-block, pre, code { overflow-x: auto; }
-
-/* Kill page-wide horizontal scroll just in case */
-html, body { overflow-x: hidden; }
-
-/* Phone tweaks: make formulas a bit smaller so they fit */
-@media (max-width: 480px) {
-  mjx-container { font-size: 90% !important; }  /* ~10% smaller */
+/* 📱 Make math equations smaller on mobile */
+@media (max-width: 600px) {
+  mjx-container {
+    font-size: 90% !important; /* reduce size a bit */
+  }
 }
 
-/* Optional: smoother touch scroll inside equations on mobile */
-@media (max-width: 768px) {
-  mjx-container { -webkit-overflow-scrolling: touch; }
+/* Optionally, make even smaller on very small screens */
+@media (max-width: 400px) {
+  mjx-container {
+    font-size: 80% !important;
+  }
 }
-
-/* Keep equations inside their box; allow scroll only horizontally */
-mjx-container {
-  display: block;
-  max-width: 100% !important;
-  overflow-x: auto;
-  overflow-y: visible;   /* <-- important: don't clip tall glyphs */
-}
-
-/* Optional: slightly smaller on phones */
-@media (max-width: 480px) {
-  mjx-container { font-size: 90% !important; }
-}
-
-/* Let long blocks scroll locally instead of widening the page */
-.math-block, pre, code { overflow-x: auto; }
-
-/* If you added `html, body { overflow-x: hidden; }` you can keep it. */
-
