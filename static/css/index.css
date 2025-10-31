@@ -805,3 +805,22 @@ html, body { overflow-x: hidden; }
 @media (max-width: 768px) {
   mjx-container { -webkit-overflow-scrolling: touch; }
 }
+
+/* Keep equations inside their box; allow scroll only horizontally */
+mjx-container {
+  display: block;
+  max-width: 100% !important;
+  overflow-x: auto;
+  overflow-y: visible;   /* <-- important: don't clip tall glyphs */
+}
+
+/* Optional: slightly smaller on phones */
+@media (max-width: 480px) {
+  mjx-container { font-size: 90% !important; }
+}
+
+/* Let long blocks scroll locally instead of widening the page */
+.math-block, pre, code { overflow-x: auto; }
+
+/* If you added `html, body { overflow-x: hidden; }` you can keep it. */
+
