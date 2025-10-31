@@ -760,23 +760,6 @@ details .sub-bullets li {
   color: #fff !important;
 }
 
-/* Keep MathJax from widening the page; allow local scroll if needed */
-mjx-container {
-  max-width: 100% !important;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-mjx-container[display="block"] { display: block; }
-
-/* Optional: smooth fling on mobile */
-@media (max-width: 768px) {
-  mjx-container { -webkit-overflow-scrolling: touch; }
-}
-
-/* Let math/code scroll locally instead of causing body-wide scrollbar */
-.math-block, pre, code {
-  overflow-x: auto;
-}
 
 /* Safety: avoid accidental horizontal page scroll */
 html, body { overflow-x: hidden; }
