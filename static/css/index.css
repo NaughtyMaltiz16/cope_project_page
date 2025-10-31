@@ -781,3 +781,27 @@ mjx-container[display="block"] { display: block; }
 /* Safety: avoid accidental horizontal page scroll */
 html, body { overflow-x: hidden; }
 
+/* Keep equations inside their box; never widen the page */
+mjx-container {
+  display: block;
+  max-width: 100% !important;
+  overflow-x: auto;      /* local scroll only if absolutely needed */
+  overflow-y: hidden;
+}
+mjx-container[display="block"] { margin: .5rem 0; }
+
+/* Let the math box, code blocks, etc. scroll locally */
+.math-block, pre, code { overflow-x: auto; }
+
+/* Kill page-wide horizontal scroll just in case */
+html, body { overflow-x: hidden; }
+
+/* Phone tweaks: make formulas a bit smaller so they fit */
+@media (max-width: 480px) {
+  mjx-container { font-size: 90% !important; }  /* ~10% smaller */
+}
+
+/* Optional: smoother touch scroll inside equations on mobile */
+@media (max-width: 768px) {
+  mjx-container { -webkit-overflow-scrolling: touch; }
+}
