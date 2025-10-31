@@ -48,15 +48,18 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$','$$'], ['\\[','\\]']]
       },
-      chtml: {                       // you’re using tex-mml-chtml → CHTML output
-        linebreaks: { automatic: true, width: 'container' }
+      chtml: {
+        linebreaks: { automatic: true, width: 'container' },
+        displayAlign: 'left',
+        displayIndent: '0em',
+        scale: 95   // slight downscale globally
       },
-      svg: { linebreaks: { automatic: true } } // harmless if you switch to SVG later
+      svg: { linebreaks: { automatic: true } }
     };
   </script>
   <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
