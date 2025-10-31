@@ -1,29 +1,616 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CoPe · EMNLP 2025</title>
-  <meta name="description" content="Personalized LLM Decoding via Contrasting Personal Preference (CoPe) — EMNLP 2025 Main.">
-  <meta property="og:title" content="CoPe · Personalized LLM Decoding" />
-  <meta property="og:description" content="EMNLP 2025 Main · Personalized LLM Decoding via Contrasting Personal Preference (CoPe)" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR_GH_USERNAME.github.io/cope_project_page/" />
-  <style>
-    html,body {height:100%;margin:0;background:#000;color:#fff;}
-    main {height:100%;display:grid;place-items:center;font:600 28px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;text-align:center;padding:24px;}
-    a {color:#9bdcff;text-decoration:none;border-bottom:1px solid #9bdcff33;padding-bottom:1px}
-    .sub {font:400 14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;opacity:.8;margin-top:10px}
-  </style>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="CoPe:Personalized LLM Decoding via Contrasting Personal Preference">
+  <meta name="keywords" content="CoPe, LLM, Personalization, Decoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalized LLM Decoding via Contrasting Personal Preference</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNECW8SR3D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YNECW8SR3D');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png"  sizes="64x64">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
 </head>
 <body>
-  <main>
-    <div>
-      <div>CoPe — Coming soon</div>
-      <div class="sub">
-        EMNLP 2025 Main · <a href="https://arxiv.org/abs/2506.12109v2">arXiv:2506.12109v2</a>
+
+<nav class="navbar lab-nav" role="navigation" aria-label="main navigation">
+  <div class="navbar-center">
+    <a class="navbar-item brand-combo" href="/">
+      <img src="./static/images/ML3_transparent.png" alt="Lab logo" class="brand-logo">
+      <span class="brand-text">
+        Machine Learning<br>Language Lab
+      </span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Personalized LLM Decoding via<br>Contrasting Personal Preference</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <span style="text-decoration: underline;">Hyungjune Bu</span><sup>1*</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://sites.google.com/view/chanjoojung/"
+                 style="text-decoration: underline;">Chanjoo Jung</a><sup>1*</sup>,
+            </span>
+
+            <span class="author-block">
+              <span>Minjae Kang</span><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/jaehyungkim">Jaehyung Kim</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Yonsei University,</span>
+            <span class="author-block"><sup>2</sup>Opt AI</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block" style="font-style: italic; font-size: 0.8em;">
+              <sup>*</sup>equal contribution
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.12109v2"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="https://github.com/cleverscent/CoPe"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <!-- Slides Link -->
+              <span class="link-block">
+                <a href="./static/slides.pptx"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides</span>
+                </a>
+              </span>
+
+              <!-- Poster Link -->
+              <span class="link-block">
+                <a href="./static/poster.pdf"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Poster</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+
+
+        </div>
       </div>
     </div>
-  </main>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/cope_teaser2.png" alt="Teaser image" style="width:100%; max-width:1000px; height:auto; display:block; margin:0 auto;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">CoPe (<strong>Co</strong>ntrasting <strong>Pe</strong>rsonal Preference)</span> <br>personalizes LLMs using implicit reward maximization via contrastive preference.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            As large language models (LLMs) are progressively deployed in various real-world applications, 
+            personalization of LLMs has become increasingly important. While various approaches to LLM personalization 
+            such as prompt-based and training-based methods have been actively explored, 
+            the development of effective decoding-time algorithms remains largely overlooked, 
+            despite their demonstrated potential. 
+            In this paper, we propose <strong>CoPe</strong> (<strong>Co</strong>ntrasting <strong>Pe</strong>rsonal Preference), 
+            a novel decoding-time approach applied after performing parameter-efficient fine-tuning (PEFT) on user-specific data. 
+            Our core idea is to leverage reward-guided decoding specifically for personalization 
+            by maximizing each user's implicit reward signal. 
+            We evaluate CoPe across five open-ended personalized text generation tasks. 
+            Our empirical results demonstrate that CoPe achieves strong performance, 
+            improving personalization by an average of 10.57% in ROUGE-L, 
+            without relying on external reward models or additional training procedures.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+<section id="motivation" class="section motivation">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered motivation-title">
+      <i class="fas fa-lightbulb"></i> Motivation
+    </h2>
+
+    <!-- Intro points (no box) -->
+    <ul class="motivation-list" style="list-style-type: disc; margin-left: 2rem; line-height: 1.6;">
+      <li><strong>LLM personalization</strong> is the process of adapting a large language model’s behavior, tone, and outputs to reflect each user’s unique preferences, goals, and style.</li>
+      <li>Personalizing LLMs is essential for creating effective personal assistants.</li>
+      <li>Many prior approaches attempt to do this, but each has significant limitations.</li>
+    </ul>
+  <h3 class="title is-4 has-text-centered" style="margin-top: 2.5rem; margin-bottom: 1.5rem;">
+    Existing Methods
+  </h3>
+    <!-- Three method boxes -->
+    <div class="columns is-variable is-5 is-multiline motivation-cards">
+      <!-- Prompt-based -->
+      <div class="column is-one-third-desktop is-full-tablet">
+        <div class="card mcard">
+          <header class="mcard-header">
+            <span class="mcard-icon"><i class="fas fa-message"></i></span>
+            <h3 class="title is-5">Prompt-based<sup>1</sup></h3>
+          </header>
+          <div class="mcard-body">
+            <ul style="list-style-type: none; padding-left: 0;">
+              <li>Examples: RAG<sup>2</sup>, PAG<sup>3</sup></li>
+              <hr style="border: none; border-top: 1px solid #ddd; margin: 0.6rem 0;">
+              <li class="weakness">Weakness: <br>superficial, prompt-dependent, context-bound.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Training-based -->
+      <div class="column is-one-third-desktop is-full-tablet">
+        <div class="card mcard">
+          <header class="mcard-header">
+            <span class="mcard-icon"><i class="fas fa-brain"></i></span>
+            <h3 class="title is-5">Training-based<sup>4</sup></h3>
+          </header>
+          <div class="mcard-body">
+            <ul style="list-style-type: none; padding-left: 0;">
+              <li>Example: full fine-tuning</li>
+              <hr style="border: none; border-top: 1px solid #ddd; margin: 0.6rem 0;">
+              <li class="weakness">Weakness: <br>high compute cost, <br>catastrophic forgetting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PEFT -->
+      <div class="column is-one-third-desktop is-full-tablet">
+        <div class="card mcard">
+          <header class="mcard-header">
+            <span class="mcard-icon"><i class="fas fa-sliders-h"></i></span>
+            <h3 class="title is-5">PEFT</h3>
+          </header>
+          <div class="mcard-body">
+            <ul style="list-style-type: none; padding-left: 0;">
+              <li>Adapts a small subset of parameters (e.g., LoRA<sup>5</sup>).</li>
+              <hr style="border: none; border-top: 1px solid #ddd; margin: 0.6rem 0;">
+              <li class="weakness">Weakness: <br>incomplete; decoding-time personalization underused.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- References section -->
+    <div class="references" style="font-size: 0.9rem; color: #888; margin-top: 1.5rem; line-height: 1.4;">
+      <p>[1] Santurkar et al. (2023), <i>Whose Opinions Do Language Models Reflect?</i>, ICML.</p>
+      <p>[2] Lewis et al. (2021), <i>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</i>, arXiv:2005.11401.</p>
+      <p>[3] Richardson et al. (2023), <i>Integrating Summarization and Retrieval for Enhanced Personalization via Large Language Models</i>, arXiv:2310.20081.</p>
+      <p>[4] Tan et al. (2024), <i>Democratizing Large Language Models via Personalized Parameter-Efficient Fine-Tuning</i>, EMNLP.</p>
+      <p>[5] Hu et al. (2022), <i>LoRA: Low-Rank Adaptation of Large Language Models</i>, ICLR.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="key-contributions" class="section key-contribs">
+  <div class="container is-max-desktop">
+    <div class="box key-contribs-box">
+      <h2 class="title is-3 has-text-centered key-title">
+        <span class="rocket-icon" aria-hidden="true">
+          <i class="fas fa-rocket"></i>
+        </span>
+        Key Contributions
+      </h2>
+      <div class="content">
+        <ul class="key-list">
+          <li><strong>First decoding-based</strong>  LLM personalization without external reward models.</li>
+          <li>Unified pipeline that integrates PEFT, synthetic negatives, and DPO to maximize implicit reward.</li>
+          <li><strong>Implicit reward maximization</strong> via contrastive decoding.</li>
+          <li>Model-agnostic, compatible with various LLMs (LLaMA, Gemma, Qwen).</li>
+          <li>Average gain of +10.57% ROUGE-L across 5 personalized generation tasks from LaMP and LongLaMP benchmarks.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="method" class="section method">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered method-title">
+      <i class="fas fa-sitemap"></i> Method
+    </h2>
+
+    <figure class="image method-figure" style="margin-bottom: 5rem;">
+      <img src="./static/images/cope_overview.png" alt="CoPe pipeline overview">
+    </figure>
+
+
+    <ol class="method-steps">
+      <li>
+        <h3 class="is-5"><strong>TAM: Task-adapted base model</strong></h3>
+        <ul>
+          <li>Adapt the base LLM $\pi_{\text{base}}$ to the target task via PEFT (LoRA).</li>
+          <li>Output: task-aware but <em>non-personalized</em> model.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="is-5"><strong>OPPU: User-specific personalization</strong></h3>
+        <ul>
+          <li>Apply LoRA fine-tuning on $\pi_{\text{base}}$ with user history $H_{\text{user}}$.</li>
+          <li>The resulting model is $\pi_{\text{user}} = \pi_{\text{base}} + \Delta_{\text{user}}$, capturing the user’s unique style and preferences.</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="is-5"><strong>Synthetic negatives</strong></h3>
+        <ul>
+          <li>
+            For each input, sample <i>K</i> candidates from 
+            <span class="math">\( \pi_{\text{base}} \)</span> 
+            and select the lowest-reward output as a negative.
+          </li>
+          <li>
+            The implicit reward is defined as:
+            <div class="math-block">
+            \[
+            r_{\mathrm{user}}(y_t)
+            = \log
+              \frac{
+                \pi_{\mathrm{user}}(y_t \mid y_{\lt t})
+              }{
+                \pi_{\mathrm{base}}(y_t \mid y_{\lt t})^{\alpha}
+              }
+            \]
+            </div>
+
+            <!-- 🔽 Foldable: Rationale behind CoPe's implicit rewards -->
+            <!-- 🔽 Foldable: Rationale behind CoPe's implicit rewards -->
+            <details class="fold">
+              <summary>
+                <span class="chev" aria-hidden="true">▸</span>
+                <span class="icon-light">💡</span>
+                Click to see the rationale behind CoPe’s implicit rewards!
+              </summary>
+
+              <div class="fold-body">
+
+                <!-- ✅ Numbered high-level points -->
+                <ol class="num-points">
+                  <li>
+                    <strong>RLHF<sup>1</sup></strong> typically uses an explicit, trained reward model.
+                  </li>
+
+                  <li>
+                    <strong>DPO<sup>2</sup></strong> showed that an explicit reward model isn’t required;
+                    instead, the “reward” can be approximated by a <em>log-likelihood ratio</em> of two models:
+                    <span class="math">\( r(y) \approx \beta \cdot \log \frac{\pi_r(y)}{\pi_{\text{ref}}(y)} \)</span>
+
+                    <!-- ✅ DPO sub-bullets -->
+                    <ul class="sub-bullets">
+                      <li><strong>Intuition:</strong> <em>How much more does the aligned model prefer this output compared to the reference model?</em></li>
+                      <li><strong>KL regularization</strong> allows the model to not drift too far from the reference model.</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    This same formulation appears in our user-implicit reward:
+                    <div class="math-block">
+                      \[
+                        r_{\text{user}}(y_t) \;=\; \log
+                        \frac{\pi_{\text{user}}(y_t \mid y_{< t})}
+                            {\pi_{\text{base}}(y_t \mid y_{< t})}
+                      \]
+                    </div>
+
+                    <!-- ✅ sub-bullet under (3) -->
+                    <ul class="sub-bullets">
+                      <li><strong>Why does this stay stable?</strong> With PEFT (e.g., LoRA), only a small set of parameters change, so \(\pi_{\text{user}}\) stays close to \(\pi_{\text{base}}\)
+                        (akin to KL regularization), making the model stable.
+                      </li>
+                      <li>This formulation also appears in <strong>contrastive decoding<sup>3</sup></strong>.</li>
+                    </ul>
+                  </li>
+                </ol>
+
+                <!-- ✅ Divider line -->
+                <hr class="fold-divider">
+
+                <div class="refs">
+                  <div>[1] Christiano et&nbsp;al., <em>Deep Reinforcement Learning from Human Preferences</em>, NeurIPS 2017.</div>
+                  <div>[2] Rafailov et&nbsp;al., <em>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</em>, NeurIPS 2023.</div>
+                  <div>[3] Li et&nbsp;al., <em>Contrastive Decoding: Open-ended Text Generation as Optimization</em>, ACL 2023.</div>
+                </div>
+
+              </div>
+            </details>
+
+          </li>
+        </ul>
+      </li>
+
+
+      <li>
+        <h3 class="is-5"><strong>DPO: Implicit preference learning</strong></h3>
+        <ul>
+          <li>We can maximize the potential of implicit rewards by aligning our implicit reward logic in both the training and decoding phases.</li>
+          <li>In that sense, DPO can be applied during the training phase.</li>
+          <li>Train to prefer user-aligned positive samples $y^{\text{pos}}$ over synthetic negatives $y^{\text{neg}}$ using DPO:
+            $$\mathcal{L}_{\text{DPO}} = - \log \sigma \Big( \beta [r_{\text{user}}(y^{\text{pos}}) - r_{\text{user}}(y^{\text{neg}})] \Big)$$
+          </li>
+          <li>Training relies purely on implicit user reward signals. Thus, no external reward model needed!</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3 class="is-5"><strong>CoPe: Reward-guided decoding</strong></h3>
+        <ul>
+          <li>At inference, choose the next token maximizing the implicit reward:
+            $$y_t^* = \arg\max_{y_t \in \mathcal{V}_{\text{head}}} r_{\text{user}}(y_t)$$
+          </li>
+          <li>This ensures generation aligns with the user’s implicit reward without external models.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<section id="experiments" class="section experiments">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      <i class="fas fa-flask"></i> Experiments
+    </h2>
+
+    <!-- Main Results -->
+    <figure class="image experiment-figure">
+      <img src="./static/images/main_results.png" alt="Main Results table showing CoPe performance">
+      <figcaption class="has-text-centered is-size-6 mt-3">
+        CoPe has the best performance, outperforming all baselines!😊
+      </figcaption>
+    </figure>
+
+    <!-- Side-by-side Tables -->
+    <div class="columns is-variable is-5 mt-6">
+      <!-- Compatibility -->
+      <div class="column is-half">
+        <figure class="image experiment-figure">
+          <img src="./static/images/other_models.png" alt="Compatibility of CoPe across different LLMs">
+          <figcaption class="is-size-6 mt-2">
+            CoPe is effective across diverse model families and parameter scales.
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- Ablation Study -->
+      <div class="column is-half">
+        <figure class="image experiment-figure">
+          <img src="./static/images/ablation.png" alt="Ablation study results for CoPe">
+          <figcaption class="is-size-6 mt-2">
+            CoPe performs best when <strong>DPO</strong> and <strong>Contrastive Decoding</strong> work together — showing a synergistic effect.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Qualitative Example -->
+    <figure class="image experiment-figure mt-6">
+      <img src="./static/images/examples.png" alt="Qualitative examples of CoPe outputs">
+
+  </div>
+</section>
+
+<!-- inside <body> -->
+<section class="vp">
+  <h2 class="vp-title">
+    <svg xmlns="http://www.w3.org/2000/svg" 
+        width="28" height="28" viewBox="0 0 24 24" 
+        fill="currentColor" class="vp-icon">
+      <path d="M17 10.5V6c0-1.1-.9-2-2-2H3C1.9 4 1 4.9 1 6v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-4.5l4 4v-11l-4 4z"/>
+    </svg>
+    Video Presentation
+  </h2>
+  <p>Watch the authors give a first-hand briefing on their paper!</p>
+
+  <div class="player">
+    <video id="vid" preload="metadata" playsinline>
+      <source src="./static/video.mp4" type="video/mp4">
+      Sorry, your browser doesn’t support HTML5 video.
+    </video>
+
+    <div class="controls">
+      <button id="back10" class="btn">⏪ 10s</button>
+      <button id="playPause" class="btn">▶️ Play</button>
+      <button id="fwd10" class="btn">10s ⏩</button>
+
+      <label class="vol">
+        🔊 <input id="volume" class="slider" type="range" min="0" max="1" step="0.05" value="1">
+      </label>
+    </div>
+
+    <input id="progress" class="slider" type="range" min="0" max="1000" value="0" step="1">
+
+    <!-- ⬇️ moved here -->
+    <div id="time" class="time">00:00 / 00:00</div>
+  </div>
+</section>
+
+<script>
+  const vid = document.getElementById('vid');
+  const playPause = document.getElementById('playPause');
+  const back10 = document.getElementById('back10');
+  const fwd10 = document.getElementById('fwd10');
+  const progress = document.getElementById('progress');
+  const timeLbl = document.getElementById('time');
+  const volume = document.getElementById('volume');
+
+  function fmt(t){const m=Math.floor(t/60), s=Math.floor(t%60);return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+
+  function paintProgress(){
+    const pct = (progress.value / progress.max) * 100;
+    progress.style.setProperty('--fill', pct + '%');
+  }
+  function paintVolume() {
+    const pct = volume.value * 100;
+    volume.style.setProperty('--fill', pct + '%');
+  }
+
+  // update whenever user changes volume
+  volume.addEventListener('input', () => {
+    vid.volume = Number(volume.value);
+    paintVolume();
+  });
+
+  // initialize on load
+  paintVolume();
+
+
+
+  function updateTime(){
+    if(!isFinite(vid.duration)) return;
+    progress.value = Math.round((vid.currentTime / vid.duration) * 1000);
+    timeLbl.textContent = `${fmt(vid.currentTime)} / ${fmt(vid.duration)}`;
+    paintProgress();
+  }
+
+  playPause.onclick = ()=> vid.paused ? vid.play() : vid.pause();
+  back10.onclick = ()=> vid.currentTime = Math.max(0, vid.currentTime - 10);
+  fwd10.onclick  = ()=> vid.currentTime = Math.min(vid.duration || 0, vid.currentTime + 10);
+
+  vid.addEventListener('loadedmetadata', updateTime);
+  vid.addEventListener('timeupdate', updateTime);
+  vid.addEventListener('play', ()=> playPause.textContent = '⏸️ Pause');
+  vid.addEventListener('pause',()=> playPause.textContent = '▶️ Play');
+
+  progress.addEventListener('input', ()=>{
+    if(!isFinite(vid.duration)) return;
+    vid.currentTime = (progress.value/1000) * vid.duration;
+    paintProgress();
+  });
+
+  volume.oninput = ()=> vid.volume = Number(volume.value);
+
+  // initialize paint on load (in case progress starts at 0)
+  paintProgress();
+</script>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @misc{bu2025personalizedllmdecodingcontrasting,
+            title={Personalized LLM Decoding via Contrasting Personal Preference}, 
+            author={Hyungjune Bu and Chanjoo Jung and Minjae Kang and Jaehyung Kim},
+            year={2025},
+            eprint={2506.12109},
+            archivePrefix={arXiv},
+            primaryClass={cs.CL},
+            url={https://arxiv.org/abs/2506.12109}, 
+      }
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This project page is based on the template from
+          <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">
+            this source code
+          </a>.
+          <br>We thank the providers for sharing their templates for better use by others.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
