@@ -41,10 +41,22 @@
       svg: { fontCache: 'global' }
     };
   </script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']]
+      },
+      chtml: {                       // you’re using tex-mml-chtml → CHTML output
+        linebreaks: { automatic: true, width: 'container' }
+      },
+      svg: { linebreaks: { automatic: true } } // harmless if you switch to SVG later
+    };
+  </script>
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-
 </head>
 <body>
 
