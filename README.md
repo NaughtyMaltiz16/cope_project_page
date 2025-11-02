@@ -1,19 +1,43 @@
 # CoPe Project Page
 
-This repository hosts the source code for the **Personalized LLM Decoding via Contrasting Personal Preference (CoPe): [EMNLP 2025 Main]** project page.
+This repository hosts the source code for the **Personalized LLM Decoding via Contrasting Personal Preference (CoPe)** project page.
 
+🔥 Accepted to EMNLP 2025 (Main)!
+
+❄️ Authors: Hyungjune Bu*, Chanjoo Jung*, Minjae Kang, Jaehyung Kim  
+(*equal contribution)
 
 🔗 **Project Website:**
-[https://naughtymaltiz16.github.io/cope_project_page/](https://naughtymaltiz16.github.io/cope_project_page/)
+https://naughtymaltiz16.github.io/cope_project_page/
 
-📝**Arxiv Paper:**
-[https://arxiv.org/abs/2506.12109](https://arxiv.org/abs/2506.12109)
+📝 **Arxiv Paper:**
+https://arxiv.org/abs/2506.12109
 
 &nbsp;
 
 &nbsp;
 
 ## Citation
+
+If you find CoPe useful for your research, please cite:
+
+```bibtex
+@misc{bu2025personalizedllmdecodingcontrasting,
+  title={Personalized LLM Decoding via Contrasting Personal Preference},
+  author={Hyungjune Bu and Chanjoo Jung and Minjae Kang and Jaehyung Kim},
+  year={2025},
+  eprint={2506.12109},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2506.12109},
+}
+
+
+&nbsp;
+
+&nbsp;
+
+## Acknowledgements
 
 
 > **Note**
