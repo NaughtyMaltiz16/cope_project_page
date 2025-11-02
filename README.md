@@ -7,7 +7,9 @@ This repository hosts the source code for the **Personalized LLM Decoding via Co
 [https://naughtymaltiz16.github.io/cope_project_page/](https://naughtymaltiz16.github.io/cope_project_page/)
 
 
----
+
+
+
 
 ## Citation
 
@@ -30,7 +32,9 @@ Their template made hosting and deploying our project page easier and more effic
 ```
 
 
----
+
+
+
 
 ## License
 
@@ -41,4 +45,4 @@ Following the provider’s licensing terms, this work is licensed under a
 
 See: [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/)
 
----
+
