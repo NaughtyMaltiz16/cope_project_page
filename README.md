@@ -31,7 +31,7 @@ If you find CoPe useful for your research, please cite:
   primaryClass={cs.CL},
   url={https://arxiv.org/abs/2506.12109},
 }
-
+```
 
 &nbsp;
 
