@@ -7,6 +7,8 @@ This repository hosts the source code for the **Personalized LLM Decoding via Co
 ❄️ Authors: Hyungjune Bu*, Chanjoo Jung*, Minjae Kang, Jaehyung Kim  
 (*equal contribution)
 
+⭐️ Affiliation: ML3 @ Yonsei University (https://ml3-yonsei.github.io/)
+
 🔗 **Project Website:**
 https://naughtymaltiz16.github.io/cope_project_page/
 
