@@ -24,14 +24,24 @@ https://arxiv.org/abs/2506.12109
 If you find CoPe useful for your research, please cite:
 
 ```bibtex
-@misc{bu2025personalizedllmdecodingcontrasting,
-  title={Personalized LLM Decoding via Contrasting Personal Preference},
-  author={Hyungjune Bu and Chanjoo Jung and Minjae Kang and Jaehyung Kim},
-  year={2025},
-  eprint={2506.12109},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2506.12109},
+@inproceedings{bu-etal-2025-personalized,
+    title = "Personalized {LLM} Decoding via Contrasting Personal Preference",
+    author = "Bu, Hyungjune  and
+      Jung, ChanJoo  and
+      Kang, Minjae  and
+      Kim, Jaehyung",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1723/",
+    pages = "33946--33966",
+    ISBN = "979-8-89176-332-6"
 }
 ```
 
