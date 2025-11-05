@@ -48,10 +48,10 @@
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$','$$'], ['\\[','\\]']]
       },
-      chtml: {                       // you’re using tex-mml-chtml → CHTML output
+      chtml: {                       
         linebreaks: { automatic: true, width: 'container' }
       },
-      svg: { linebreaks: { automatic: true } } // harmless if you switch to SVG later
+      svg: { linebreaks: { automatic: true } } 
     };
   </script>
   <script id="MathJax-script" async
@@ -361,8 +361,8 @@
             \]
             </div>
 
-            <!-- 🔽 Foldable: Rationale behind CoPe's implicit rewards -->
-            <!-- 🔽 Foldable: Rationale behind CoPe's implicit rewards -->
+            
+            <!--  Foldable: Rationale behind CoPe's implicit rewards -->
             <details class="fold">
               <summary>
                 <span class="chev" aria-hidden="true">▸</span>
@@ -372,7 +372,7 @@
 
               <div class="fold-body">
 
-                <!-- ✅ Numbered high-level points -->
+          
                 <ol class="num-points">
                   <li>
                     <strong>RLHF<sup>1</sup></strong> typically uses an explicit, trained reward model.
@@ -383,7 +383,7 @@
                     instead, the “reward” can be approximated by a <em>log-likelihood ratio</em> of two models:
                     <span class="math">\( r(y) \approx \beta \cdot \log \frac{\pi_r(y)}{\pi_{\text{ref}}(y)} \)</span>
 
-                    <!-- ✅ DPO sub-bullets -->
+                    
                     <ul class="sub-bullets">
                       <li><strong>Intuition:</strong> <em>How much more does the aligned model prefer this output compared to the reference model?</em></li>
                       <li><strong>KL regularization</strong> allows the model to not drift too far from the reference model.</li>
@@ -400,7 +400,7 @@
                       \]
                     </div>
 
-                    <!-- ✅ sub-bullet under (3) -->
+              
                     <ul class="sub-bullets">
                       <li><strong>Why does this stay stable?</strong> With PEFT (e.g., LoRA), only a small set of parameters change, so \(\pi_{\text{user}}\) stays close to \(\pi_{\text{base}}\)
                         (akin to KL regularization), making the model stable.
@@ -410,7 +410,7 @@
                   </li>
                 </ol>
 
-                <!-- ✅ Divider line -->
+      
                 <hr class="fold-divider">
 
                 <div class="refs">
@@ -581,15 +581,25 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-      @misc{bu2025personalizedllmdecodingcontrasting,
-            title={Personalized LLM Decoding via Contrasting Personal Preference}, 
-            author={Hyungjune Bu and Chanjoo Jung and Minjae Kang and Jaehyung Kim},
-            year={2025},
-            eprint={2506.12109},
-            archivePrefix={arXiv},
-            primaryClass={cs.CL},
-            url={https://arxiv.org/abs/2506.12109}, 
-      }
+      @inproceedings{bu-etal-2025-personalized,
+    title = "Personalized {LLM} Decoding via Contrasting Personal Preference",
+    author = "Bu, Hyungjune  and
+      Jung, ChanJoo  and
+      Kang, Minjae  and
+      Kim, Jaehyung",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.1723/",
+    pages = "33946--33966",
+    ISBN = "979-8-89176-332-6"
+}
 </code></pre>
   </div>
 </section>
